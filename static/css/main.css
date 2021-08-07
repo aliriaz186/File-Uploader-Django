@@ -1,0 +1,17 @@
+.auth-box{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(211, 211, 211, 0.27);
+    border-radius: 10px;
+}
+
+.files-box{
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(211, 211, 211, 0.27);
+    border-radius: 10px;
+    border: 2px dotted black;
+
+}

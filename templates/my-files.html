@@ -1,0 +1,33 @@
+{% extends 'dashboard.html' %}
+ {% block content%}
+     <div class="container">
+
+           <h3 class="mt-5">My Files</h3>
+            <div id="fileprogressbox" class="mt-5" >
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>File</th>
+                            <th>File Name</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for file in files %}
+                            <tr>
+                                <td><img src="{{ file.url }}" style="width: 200px;height: 200px"></td>
+                                <td>{{ file.name }}</td>
+                                <td>
+                                    <a class="btn btn-outline-primary mt-1" download="true" href="{{ file.url }}">Download</a>
+                                    <a class="btn btn-outline-primary mt-1" target="_blank" href="{{ file.url }}">Preview</a>
+                                    <a class="btn btn-outline-primary mt-1">Share</a>
+                                    <a class="btn btn-outline-danger mt-1" href="{% url 'deletefile' id=file.id %}">Delete</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+     </div>
+ {% endblock %}
